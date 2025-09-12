@@ -4,7 +4,7 @@ const path = require("path");
 
 const app = express();
 
-// Serve static files from 'public'
+// Serve static files from root public folder
 app.use(express.static(path.join(__dirname, "../public")));
 
 // SPA fallback
@@ -12,5 +12,4 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
-module.exports = app;              // optional, for testing locally
-module.exports.handler = serverless(app);  // Vercel entry point
+module.exports.handler = serverless(app);
