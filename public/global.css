@@ -1,16 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
 /* Reset some defaults */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
 }
 
 /* Make sure the layout supports a sticky footer */
 html, body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+  color: #e6e6e6;
+  font-weight: 300; /* Regular weight */
   height: 100%;
   display: flex;
   flex-direction: column;
+  background: #121212;
 }
 
 /* Main content grows to push footer down */
@@ -18,17 +24,32 @@ main {
   flex: 1;
 }
 
+a {
+  color: #6A6AE5; /* choose your preferred color */
+  text-decoration: none; /* removes underline */
+}
+
+a:visited {
+  color: #6A6AE5; /* keeps visited links the same color */
+  text-decoration: none; /* ensures no underline on visited links */
+}
+
+a:hover {
+  color: #EBB3FF;
+}
+
+
 /* Navigation bar */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #222;
-  padding: 1rem 2rem;
+  background-color: #181818;
+  padding: 1rem 4rem;
 }
 
 nav .logo {
-  color: #fff;
+  color: #6A6AE5;
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -41,39 +62,58 @@ nav .nav-links {
 
 nav .nav-links li a {
   text-decoration: none;
-  color: #fff;
+  color: #6A6AE5;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 nav .nav-links li a:hover {
-  color: #f39c12;
+  color: #EBB3FF;
 }
 
 /* Section styling */
-section {
-  padding: 4rem 2rem;
-  margin-bottom: 4rem; 
+/* First About section */
+#about {
+  background-color: #121212; /* darker solid background */
+  padding: 4rem 4rem;
 }
 
-section:nth-child(even) {
-  background: #f9f9f9;
+/* All other sections */
+section:not(#about) {
+  padding: 4rem 4rem;
+  background-color: #181818;
 }
 
-h1,
-h2 {
+h1 {
+  color: #a1e8cb;
   margin-bottom: 1rem;
+  font-weight: 500;
+}
+h2 {
+  color: #a1e8cb;
+  margin-bottom: 1rem;
+  font-weight: 400;
+}
+
+h3 {
+  /* color: #a1e8cb; */
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.project-list {
+  list-style-position: inside; /* bullets appear inside padding */
+  margin: 0 0 1rem 0;           /* only adds space after the whole list */
 }
 
 /* Footer */
 footer {
   text-align: center;
   padding: 1.5rem;
-  background: #222;
-  color: #fff;
+  /* color: #6A6AE5; */
 }
 
 /* Paragraph text style */
 p {
-  color: blue;
+  color: #e6e6e6;
 }
