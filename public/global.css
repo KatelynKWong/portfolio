@@ -7,12 +7,12 @@
   box-sizing: border-box;
 }
 
-/* Make sure the layout supports a sticky footer */
-html, body {
+html,
+body {
   font-family: 'Inter', sans-serif;
   line-height: 1.5;
   color: #e6e6e6;
-  font-weight: 300; /* Regular weight */
+  font-weight: 300;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -24,14 +24,15 @@ main {
   flex: 1;
 }
 
+/* link style */
 a {
-  color: #6A6AE5; /* choose your preferred color */
-  text-decoration: none; /* removes underline */
+  color: #6A6AE5;
+  text-decoration: none;
 }
 
 a:visited {
-  color: #6A6AE5; /* keeps visited links the same color */
-  text-decoration: none; /* ensures no underline on visited links */
+  color: #6A6AE5;
+  text-decoration: none;
 }
 
 a:hover {
@@ -72,23 +73,22 @@ nav .nav-links li a:hover {
 }
 
 /* Section styling */
-/* First About section */
-#about {
-  background-color: #121212; /* darker solid background */
+section {
   padding: 4rem 4rem;
 }
 
-/* All other sections */
-section:not(#about) {
-  padding: 4rem 4rem;
+#academia {
   background-color: #181818;
+  /* lighter background */
 }
 
+/* Headings */
 h1 {
   color: #a1e8cb;
   margin-bottom: 1rem;
   font-weight: 500;
 }
+
 h2 {
   color: #a1e8cb;
   margin-bottom: 1rem;
@@ -96,24 +96,21 @@ h2 {
 }
 
 h3 {
-  /* color: #a1e8cb; */
   margin-bottom: 1rem;
   font-weight: 300;
 }
 
-.project-list {
-  list-style-position: inside; /* bullets appear inside padding */
-  margin: 0 0 1rem 0;           /* only adds space after the whole list */
+.list {
+  list-style-position: inside;
+  margin: 0 0 1rem 0;
 }
 
 /* Footer */
+#contact {
+  padding: 4rem 0 0 4rem;
+}
+
 footer {
   text-align: center;
   padding: 1.5rem;
-  /* color: #6A6AE5; */
-}
-
-/* Paragraph text style */
-p {
-  color: #e6e6e6;
 }
