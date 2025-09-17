@@ -1,4 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+  --primary-color: #e2e1e0;
+  --secondary-color: #fc8472;
+  --tertiary-color: #f8b267;
+  --quaternary-color: #65cdba;
+  --quinary-color: #b8d9bf;
+}
 
 /* Reset some defaults */
 * {
@@ -9,9 +17,9 @@
 
 html,
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "DM Sans", sans-serif;
   line-height: 1.5;
-  color: #e6e6e6;
+  color: var(--primary-color);
   font-weight: 300;
   height: 100%;
   display: flex;
@@ -26,17 +34,17 @@ main {
 
 /* link style */
 a {
-  color: #6A6AE5;
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
 a:visited {
-  color: #6A6AE5;
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
 a:hover {
-  color: #EBB3FF;
+  color: var(--tertiary-color);
 }
 
 
@@ -50,7 +58,7 @@ nav {
 }
 
 nav .logo {
-  color: #6A6AE5;
+  color: var(--secondary-color);
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -63,13 +71,13 @@ nav .nav-links {
 
 nav .nav-links li a {
   text-decoration: none;
-  color: #6A6AE5;
+  color: var(--secondary-color);
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
 nav .nav-links li a:hover {
-  color: #EBB3FF;
+  color: var(--tertiary-color);
 }
 
 /* Section styling */
@@ -84,18 +92,19 @@ section {
 
 /* Headings */
 h1 {
-  color: #a1e8cb;
+  color: var(--quaternary-color);
   margin-bottom: 1rem;
   font-weight: 500;
 }
 
 h2 {
-  color: #a1e8cb;
+  color: var(--quaternary-color);
   margin-bottom: 1rem;
   font-weight: 400;
 }
 
 h3 {
+  color: var(--quinary-color);
   margin-bottom: 1rem;
   font-weight: 300;
 }
