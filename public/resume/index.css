@@ -1,0 +1,138 @@
+:root {
+    --primary-color: #e2e1e0;
+    --secondary-color: #fc8472;
+    --tertiary-color: #f8b267;
+    --quaternary-color: #65cdba;
+    --quinary-color: #b8d9bf;
+}
+
+
+/* #resume-pdf {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden; */
+/* } */
+
+/* Optional: make sure nav/footer are above the PDF */
+nav,
+footer {
+    position: relative;
+    z-index: 100;
+}
+
+section {
+    padding: 1rem 4rem 0rem 4rem;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+p {
+    max-width: none;
+  }  
+
+#resume {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0rem;
+    font-family: "DM Sans", Arial, sans-serif;
+    color: #ded8d8;
+    line-height: 1.6;
+}
+
+.resume-header {
+    text-align: center;
+    margin: 1rem 0 1rem 0;
+}
+
+.resume-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact a {
+    color: var(--quinary-color);
+    text-decoration: none;
+    margin: 0 0.3rem;
+}
+
+.contact a:hover {
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+
+#title {
+    text-align: right;
+}
+
+a.download {
+    color: var(--tertiary-color);
+    text-decoration: none;
+    margin: 0 0.3rem;
+    
+}
+
+a.download:hover {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.summary {
+    font-style: italic;
+    margin: 1rem 4rem 0 4rem;
+    color: var(--primary-color);
+}
+
+.resume-section h2 {
+    color: var(--quaternary-color);
+    border-bottom: 2px solid var(--quaternary-color);
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.resume-section h3 {
+    font-weight: bold;
+}
+
+p.degree {
+    position: relative;
+    font-style: italic;
+    font-weight: normal;
+    color: var(--quinary-color);
+}
+
+p.degree span.year {
+    font-style: normal;
+    position: absolute;
+    right: 0;
+}
+
+
+.item {
+    margin-bottom: 1.5rem;
+}
+
+.item h3 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--quinary-color);
+}
+
+.role {
+    color: var(--quinary-color);
+    margin-bottom: 0.5rem;
+}
+
+.year {
+    float: right;
+    font-weight: normal;
+    color: var(--quinary-color);
+}
+
+ul {
+    margin: 0.5rem 0 0 1.2rem;
+}
