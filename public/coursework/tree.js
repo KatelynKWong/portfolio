@@ -86,8 +86,6 @@ function drawGraph(data) {
     .on("mousemove", (event) => tooltip.style("left", (event.pageX + 10) + "px").style("top", (event.pageY + 10) + "px"))
     .on("mouseout", () => tooltip.style("opacity", 0));
 
-  // Legend omitted for brevity (unchanged)
-
 
   function updateArrows(lineData, spacing = 30) {
     lineData.forEach(d => {
@@ -117,6 +115,46 @@ function drawGraph(data) {
       });
     });
   }
+
+
+
+  // Adding legend
+  // Define your subjects and colors
+  const subjects = [
+    { name: "Math", color: "#fc8472" },
+    { name: "Data Science", color: "#65cdba" },
+    { name: "Econ", color: "#f8b267" },
+    { name: "Business", color: "#ffe8ae" }
+  ];
+
+  // Add legend container
+  const legend = d3.select("#tree svg")
+    .append("g")
+    .attr("class", "legend")
+    .attr("transform", "translate(20, 20)"); // top-left position
+
+  // Add legend items
+  const legendItem = legend.selectAll("g")
+    .data(subjects)
+    .join("g")
+    .attr("transform", (d, i) => `translate(0, ${i * 25})`); // spacing between items
+
+  // Draw color boxes
+  legendItem.append("rect")
+    .attr("width", 20)
+    .attr("height", 20)
+    .attr("fill", d => d.color)
+    .attr("stroke", "#333");
+
+  // Add text labels
+  legendItem.append("text")
+    .attr("x", 30)
+    .attr("y", 15) // vertically center text with box
+    .text(d => d.name)
+    .attr("font-size", 14)
+    .attr("fill", "#e2e1e0");
+
+
 
   // Simulation tick
   const NODE_RADIUS = 25;
