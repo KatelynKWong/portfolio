@@ -273,10 +273,6 @@
             "to": "Econ100"
         },
         {
-            "from": "Math20C",
-            "to": "Econ100"
-        },
-        {
             "from": "Econ1",
             "to": "Econ138"
         }
