@@ -3,16 +3,33 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dynamic Tree from JSON</title>
+
+    <!-- CSS first -->
     <link rel="stylesheet" href="/global.css">
+    <link rel="stylesheet" href="/coursework/index.css">
+
+    <!-- D3 library -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
+
 
 <body>
     <div id="navbar"></div>
-    <h1>Coursework</h1>
+    <h1>Course Prerequisite Map</h1>
+    <section>
+        <div id="tooltip"></div>
+        <div id="tree">
+            <svg viewBox="0 0 100% 100%" preserveAspectRatio="xMidYMid meet"></svg>
+        </div>
+    </section>
+    <!-- <div id="footer"></div> -->
+
+    <!-- Load external JS -->
+    <script src="/coursework/tree.js"></script>
+
     <script src="script.js"></script>
-    <div id="footer"></div>
+
 </body>
 
 </html>

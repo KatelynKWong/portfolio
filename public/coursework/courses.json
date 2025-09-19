@@ -1,0 +1,149 @@
+{
+    "nodes": [
+      { "id": "Math18", "name": "Linear Algebra", "subject": "Math", "size": 35},
+      { "id": "Math20C", "name": "Calculus & Analytical Geometry for Science &Engineering", "subject": "Math", "size": 27},
+      { "id": "Math20D", "name": "Intro to Differential Equations", "subject": "Math", "size": 27},
+      { "id": "Math109", "name": "Mathematical Reasoning", "subject": "Math", "size": 27},
+      { "id": "Math130", "name": "Differential Equations & Dynamical Systems", "subject": "Math", "size": 35},
+      { "id": "Math170A", "name": "Numerical Analysis & Linear Programming", "subject": "Math", "size": 42},
+      { "id": "Math142A", "name": "Real Analysis", "subject": "Math", "size": 35},
+      { "id": "Math171A", "name": "Numerical Optimization & Linear Programming", "subject": "Math", "size": 35},
+      { "id": "Math189", "name": "Data Analysis & Inference", "subject": "Math", "size": 42},
+      { "id": "Math171B", "name": "Num Optimization & Nonlinear Programming", "subject": "Math", "size": 35},
+      { "id": "Dsc10", "name": "Data Science Principles", "subject": "Data Science", "size": 27},
+      { "id": "Dsc20", "name": "Programming & Data Structure - Python", "subject": "Data Science", "size": 27},
+      { "id": "Dsc40", "name": "Theoretical Foundations of Data Sci (A,B)", "subject": "Data Science", "size": 27},
+      { "id": "Dsc30", "name": "Data Structures & Algorithms - Java", "subject": "Data Science", "size": 35},
+      { "id": "Dsc80", "name": "Advanced Data Structures", "subject": "Data Science", "size": 42},
+      { "id": "Dsc106", "name": "Data Visualization", "subject": "Data Science", "size": 27},
+      { "id": "Dsc100", "name": "Data Management", "subject": "Data Science", "size": 27},
+      { "id": "Dsc140", "name": "Probabilistic Modeling & Machine Learning", "subject": "Data Science", "size": 42},
+      { "id": "Econ1", "name": "Microeconomic Principles", "subject": "Econ", "size": 27},
+      { "id": "Econ3", "name": "Macroeconomic Principles", "subject": "Econ", "size": 27},
+      { "id": "Econ120", "name": "Econometrics (A,B,C)", "subject": "Econ", "size": 42},
+      { "id": "Econ138", "name": "Econometrics of Discrimination", "subject": "Econ", "size": 27},
+      { "id": "Econ100", "name": "Advanced Microeconomics (A,B,C)", "subject": "Econ", "size": 42},
+      { "id": "Busn119", "name": "Financial Management", "subject": "Business", "size": 27},
+      { "id": "Intl109", "name": "Quantitative Analysis", "subject": "Econ", "size": 42},
+      { "id": "Mgt103", "name": "Product Marketing & Management", "subject": "Business", "size": 27},
+      { "id": "Soci116", "name": "Data Analysis Methods", "subject": "Data Science", "size": 27}
+    ],
+    "edges": [
+        {
+            "from": "Math20C",
+            "to": "Math20D"
+        },
+        {
+            "from": "Math20C",
+            "to": "Math109"
+        },
+        {
+            "from": "Math18",
+            "to": "Math109"
+        },
+        {
+            "from": "Math20D",
+            "to": "Math130"
+        },
+        {
+            "from": "Math18",
+            "to": "Math130"
+        },
+        {
+            "from": "Math20C",
+            "to": "Math170A"
+        },
+        {
+            "from": "Math109",
+            "to": "Math170A"
+        },
+        {
+            "from": "Math109",
+            "to": "Math142A"
+        },
+        {
+            "from": "Math18",
+            "to": "Math171A"
+        },
+        {
+            "from": "Math20C",
+            "to": "Math171A"
+        },
+        {
+            "from": "Math18",
+            "to": "Math189"
+        },
+        {
+            "from": "Econ120",
+            "to": "Math189"
+        },
+        {
+            "from": "Math171A",
+            "to": "Math171B"
+        },
+        {
+            "from": "Dsc10",
+            "to": "Dsc20"
+        },
+        {
+            "from": "Dsc20",
+            "to": "Dsc30"
+        },
+        {
+            "from": "Dsc10",
+            "to": "Dsc40"
+        },
+        {
+            "from": "Math18",
+            "to": "Dsc40"
+        },
+        {
+            "from": "Dsc30",
+            "to": "Dsc80"
+        },
+        {
+            "from": "Dsc40",
+            "to": "Dsc80"
+        },
+        {
+            "from": "Dsc80",
+            "to": "Dsc106"
+        },
+        {
+            "from": "Dsc80",
+            "to": "Dsc100"
+        },
+        {
+            "from": "Dsc80",
+            "to": "Dsc140"
+        },
+        {
+            "from": "Econ120",
+            "to": "Dsc140"
+        },
+        {
+            "from": "Econ1",
+            "to": "Econ3"
+        },
+        {
+            "from": "Econ1",
+            "to": "Econ120"
+        },
+        {
+            "from": "Math20C",
+            "to": "Econ120"
+        },
+        {
+            "from": "Econ1",
+            "to": "Econ100"
+        },
+        {
+            "from": "Math20C",
+            "to": "Econ100"
+        },
+        {
+            "from": "Econ1",
+            "to": "Econ138"
+        }
+    ]
+}
