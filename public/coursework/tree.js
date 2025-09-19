@@ -8,7 +8,7 @@ fetch("/coursework/courses.json")
   .catch(err => console.error("Error loading JSON:", err));
 
 
-  function drawGraph(data) {
+function drawGraph(data) {
   const svg = d3.select("#tree svg");
   const width = svg.node().clientWidth;
   const height = svg.node().clientHeight;
@@ -71,7 +71,7 @@ fetch("/coursework/courses.json")
     .attr("fill", color);
 
 
-    nodeGroup.append("text")
+  nodeGroup.append("text")
     .text(d => d.id)
     .attr("font-size", baseRadius * 0.5) // scale font with SVG
     .attr("text-anchor", "middle")
@@ -146,7 +146,7 @@ fetch("/coursework/courses.json")
   };
 
   // Apply forces
-  
+
   simulation
     .force("link", d3.forceLink(links).id(d => d.id).distance(120))
     .force("charge", d3.forceManyBody().strength(-400))

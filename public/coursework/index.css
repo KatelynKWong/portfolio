@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     height: 100%;
@@ -21,14 +22,17 @@ section {
     flex: 1 1 auto;
     display: flex;
     flex-direction: column;
-    padding: 0rem 4rem 2rem 4rem; /* okay to have horizontal/top padding */
-    min-height: 0; /* allows #tree to shrink */
+    padding: 0rem 4rem 2rem 4rem;
+    /* okay to have horizontal/top padding */
+    min-height: 0;
+    /* allows #tree to shrink */
 }
 
 /* Tree container fills remaining space in section */
 #tree {
     flex: 1 1 auto;
-    min-height: 0; /* critical to prevent overflow */
+    min-height: 0;
+    /* critical to prevent overflow */
 }
 
 /* SVG fills container */
