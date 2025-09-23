@@ -51,6 +51,21 @@ a:hover {
   color: var(--tertiary-color);
 }
 
+/* Sublink styles */
+a.sublink{
+  color: var(--tertiary-color);
+  text-decoration: none;
+}
+
+a.sublink:visited {
+  color: var(--tertiary-color);
+  text-decoration: none;
+}
+
+a.sublink:hover {
+  color: var(--secondary-color);
+}
+
 
 /* Navigation bar settings*/
 nav {
@@ -126,6 +141,39 @@ p {
 .list {
   list-style-position: inside;
   margin: 0 0 1rem 0;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.italics {
+  font-style: italic;
+}
+
+.dotted {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+}
+
+.indent {
+ margin-left: 1.5rem; 
+}
+
+/* Column Settings */
+.container {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 1rem;
+}
+
+.column:first-child {
+  flex: 60%;   /* left column takes 70% */
+}
+
+.column:last-child {
+  flex: 40%;   /* right column takes 30% */
+  padding-top: 1rem;
 }
 
 /* Footer */

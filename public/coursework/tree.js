@@ -34,7 +34,7 @@ function drawGraph(data) {
     .attr("stroke-width", 1.5)
     ;
 
-  // 2️⃣ Create arrows group BEFORE node group
+  // Create arrows group BEFORE node group
   const arrowsGroup = svg.append("g").attr("class", "arrows");
 
   // Pre-create arrow paths for maximum expected number
