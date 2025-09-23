@@ -185,10 +185,6 @@
             "to": "Math130"
         },
         {
-            "from": "Math20C",
-            "to": "Math170A"
-        },
-        {
             "from": "Math109",
             "to": "Math170A"
         },

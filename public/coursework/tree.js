@@ -159,7 +159,7 @@ function drawGraph(data) {
   // Simulation tick
   const NODE_RADIUS = 25;
   const PADDING = 40;
-  const GROUP_STRENGTH = 0.08;
+  const GROUP_STRENGTH = 0.085;
   const CENTER_Y = height / 2;
 
   simulation
