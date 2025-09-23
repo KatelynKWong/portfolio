@@ -11,7 +11,7 @@ function drawGraph(data) {
   const svg = d3.select("#tree svg");
   const width = svg.node().clientWidth;
   const height = svg.node().clientHeight;
-  const baseRadius = width / 50;
+  const baseRadius = width / 45;
 
   // Generate JSON Links
   const links = data.edges.map(e => ({ source: e.from, target: e.to }));
@@ -117,13 +117,12 @@ function drawGraph(data) {
   }
 
 
-
   // Adding legend
   // Define your subjects and colors
   const subjects = [
     { name: "Math", color: "#fc8472" },
     { name: "Data Science", color: "#65cdba" },
-    { name: "Econ", color: "#f8b267" },
+    { name: "Economics", color: "#f8b267" },
     { name: "Business", color: "#ffe8ae" }
   ];
 
@@ -158,17 +157,31 @@ function drawGraph(data) {
 
   // Simulation tick
   const NODE_RADIUS = 25;
-  const PADDING = 40;
+  const PADDING = 30;
   const GROUP_STRENGTH = 0.085;
   const CENTER_Y = height / 2;
 
+  const container = document.querySelector("#tree");
+  let containerWidth = container.clientWidth;
+  let containerHeight = container.clientHeight;
+
+  const BASE_DISTANCE = 120;
+  const BASE_COLLIDE = NODE_RADIUS + 40;
+
+  // scale based on tree container size
+  let scale = Math.min(containerWidth / 1200, containerHeight / 800, 1);
+
   simulation
-    .force("link", d3.forceLink(links).id(d => d.id).distance(120))
+    .force("link", d3.forceLink(links)
+      .id(d => d.id)
+      .distance(BASE_DISTANCE * scale)
+    )
     .force("charge", d3.forceManyBody().strength(-400))
-    .force("x", d3.forceX(d => d.subject === "Math" ? width * 0.25 : width * 0.5).strength(GROUP_STRENGTH))
-    .force("y", d3.forceY(CENTER_Y).strength(GROUP_STRENGTH))
-    .force("collide", d3.forceCollide().radius(NODE_RADIUS + 40))
-    .force("center", d3.forceCenter(width / 2, CENTER_Y));
+    .force("x", d3.forceX(d => d.subject === "Math" ? containerWidth * 0.25 : containerWidth * 0.5).strength(GROUP_STRENGTH))
+    .force("y", d3.forceY(containerHeight / 2).strength(GROUP_STRENGTH))
+    .force("collide", d3.forceCollide().radius(BASE_COLLIDE * scale))
+    .force("center", d3.forceCenter(containerWidth / 2, containerHeight / 2));
+
 
   simulation.on("tick", () => {
     link
