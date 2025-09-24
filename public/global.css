@@ -52,7 +52,7 @@ a:hover {
 }
 
 /* Sublink styles */
-a.sublink{
+a.sublink {
   color: var(--tertiary-color);
   text-decoration: none;
 }
@@ -157,7 +157,7 @@ p {
 }
 
 .indent {
- margin-left: 1.5rem; 
+  margin-left: 1.5rem;
 }
 
 /* Column Settings */
@@ -168,25 +168,14 @@ p {
 }
 
 .column:first-child {
-  flex: 60%;   /* left column takes 70% */
+  flex: 60%;
+  /* left column takes 70% */
 }
 
 .column:last-child {
-  flex: 40%;   /* right column takes 30% */
+  flex: 40%;
+  /* right column takes 30% */
   padding-top: 1rem;
-}
-
-/* Flex properties */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column; /* stack vertically */
-  }
-
-  .column:first-child,
-  .column:last-child {
-    flex: 100%; /* full width */
-    padding-top: 0; /* optional */
-  }
 }
 
 /* Footer */
@@ -198,4 +187,29 @@ footer {
   position: relative;
   text-align: center;
   padding: 1.5rem;
+}
+
+/* Flex properties */
+@media (max-width: 768px) {
+
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    flex-direction: column;
+    /* stack vertically */
+  }
+
+  .column:first-child,
+  .column:last-child {
+    flex: 100%;
+    /* full width */
+    padding-top: 0;
+    /* optional */
+  }
 }
