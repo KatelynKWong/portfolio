@@ -176,6 +176,19 @@ p {
   padding-top: 1rem;
 }
 
+/* Flex properties */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* stack vertically */
+  }
+
+  .column:first-child,
+  .column:last-child {
+    flex: 100%; /* full width */
+    padding-top: 0; /* optional */
+  }
+}
+
 /* Footer */
 #contact {
   padding: 4rem 0 0 4rem;

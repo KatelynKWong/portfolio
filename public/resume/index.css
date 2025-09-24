@@ -24,6 +24,25 @@ section {
     padding: 1rem 4rem 0rem 4rem;
 }
 
+h3 {
+    display: flex;
+    justify-content: space-between; /* push name left, year right */
+    align-items: center;            /* vertically center */
+    font-weight: bold;
+    margin: 0;                      /* optional, remove extra spacing */
+}
+
+h3 span.year {
+    font-weight: normal;  /* optional: differentiate style */
+    flex-shrink: 0;       /* prevent shrinking */
+    white-space: nowrap;  /* keep year on one line */
+}
+
+h3 span.title-text {
+    max-width: 70%;       /* prevent overlap with year */
+    overflow: hidden;
+}
+
 p {
     max-width: none;
   }  
@@ -95,17 +114,26 @@ a.download:hover {
 }
 
 p.degree {
-    position: relative;
+    display: flex;
+    justify-content: space-between; /* space between degree and year */
+    align-items: center;            /* vertically center if multi-line */
     font-style: italic;
     font-weight: normal;
     color: var(--quinary-color);
+    margin: 0;
+}
+
+p.degree span.degree-text {
+    max-width: 70%; /* adjust percentage as needed */
+    overflow: hidden;
+   
 }
 
 p.degree span.year {
     font-style: normal;
-    position: absolute;
-    right: 0;
+    flex-shrink: 0;            /* prevent shrinking */
 }
+
 
 
 .item {
