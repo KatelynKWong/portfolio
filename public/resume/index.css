@@ -82,6 +82,11 @@ p {
     text-align: right;
 }
 
+.download {
+    display: block;      /* makes text-align work */
+    text-align: right;   /* aligns the link text to the right */
+}
+
 a.download {
     color: var(--tertiary-color);
     text-decoration: none;
