@@ -200,11 +200,30 @@ nav .logo.show-logo {
   font-weight: 500;
 }
 
+.open-in-new {
+  opacity: .6;
+  font-size: 16px;
+  color: var(--secondary-color);
+}
+
+.nav-external-container {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  align-items: center;
+}
+
 /* Hamburger menu hidden by default */
 .hamburger {
   display: none;
   font-size: 2rem;
   cursor: pointer;
+}
+
+.hamburger,
+.nav-links {
+  cursor: pointer;
+  user-select: none;
 }
 
 /* Mobile View properties*/
