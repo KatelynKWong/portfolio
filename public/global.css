@@ -66,40 +66,6 @@ a.sublink:hover {
   color: var(--secondary-color);
 }
 
-
-/* Navigation bar settings*/
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #181818;
-  padding: 1rem 4rem;
-}
-
-/* Nav logo styling */
-nav .logo {
-  color: var(--secondary-color);
-  font-size: 1.5rem;
-  font-weight: bold;
-  visibility: hidden;
-  /* hidden by default */
-  opacity: 0;
-}
-
-/* Show logo on non-home pages */
-nav .logo.show-logo {
-  visibility: visible;
-  opacity: 1;
-}
-
-/* Nav links style */
-nav .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  font-weight: 500;
-}
-
 /* Section styling */
 section {
   padding: 4rem 4rem;
@@ -111,7 +77,6 @@ section {
 
 #academia {
   background-color: #181818;
-  /* lighter background */
 }
 
 /* Default heading styles */
@@ -169,12 +134,10 @@ p {
 
 .column:first-child {
   flex: 60%;
-  /* left column takes 70% */
 }
 
 .column:last-child {
   flex: 40%;
-  /* right column takes 30% */
   padding-top: 1rem;
 }
 
@@ -189,9 +152,63 @@ footer {
   padding: 1.5rem;
 }
 
-/* Flex properties */
-@media (max-width: 768px) {
 
+/* Navigation bar settings */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #181818;
+  padding: 1rem 4rem;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Nav logo styling */
+nav .logo {
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+  font-weight: bold;
+  visibility: hidden;
+  /* hidden by default */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Show logo on non-home pages */
+nav .logo.show-logo {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Submenu hover for desktop */
+.nav-links li:hover>ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  background-color: #181818;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+
+/* Nav links style */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  font-weight: 500;
+}
+
+/* Hamburger menu hidden by default */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile View properties*/
+@media (max-width: 768px) {
 
   html,
   body {
@@ -208,8 +225,35 @@ footer {
   .column:first-child,
   .column:last-child {
     flex: 100%;
-    /* full width */
-    padding-top: 0;
-    /* optional */
+    padding-top: .5rem;
+  }
+
+  nav {
+    padding: 1rem 2rem;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none; /* hidden by default */
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #181818;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  /* Show nav links when active */
+  .nav-links.active {
+    display: flex;
   }
 }

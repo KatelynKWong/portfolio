@@ -9,18 +9,27 @@ document.addEventListener("DOMContentLoaded", () => {
         const navbar = document.getElementById("navbar");
         navbar.innerHTML = data;
   
-        // Select logo inside the navbar
+        // Show/hide logo
         const logo = navbar.querySelector('.logo');
         if (logo) {
           const path = window.location.pathname.replace(/\/$/, '');
           if (path === '' || path === '/index.html') {
-            logo.classList.remove('show-logo'); // hide on home page
+            logo.classList.remove('show-logo');
           } else {
-            logo.classList.add('show-logo');    // show on other pages
+            logo.classList.add('show-logo');
           }
         }
-      })
-      .catch(err => console.error("Navbar load error:", err));
+  
+        // ---- ADD HAMBURGER LOGIC HERE ----
+        const hamburger = navbar.querySelector("#hamburger");
+        const navLinks = navbar.querySelector("#nav-links");
+  
+        if (hamburger && navLinks) {
+            hamburger.addEventListener("click", () => {
+                navLinks.classList.toggle("active"); // toggles open/close
+              });
+        }
+      });
   
     // Load footer
     fetch("/footer.html")
