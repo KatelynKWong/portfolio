@@ -118,7 +118,7 @@ function drawGraph(data) {
 
 
   // Adding legend
-  // Define your subjects and colors
+  // Defining subjects and colors
   const subjects = [
     { name: "Math", color: "#fc8472" },
     { name: "Data Science", color: "#65cdba" },
